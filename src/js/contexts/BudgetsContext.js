@@ -1,25 +1,16 @@
 import React, { useContext, useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import {v4 as uuidV4} from 'uuid'
+
 const BudgetsContext = React.createContext();
+
+export const UNCATEGORIZED_BUDGET_ID = "Uncategorized"
 
 export function useBudgets() {
   return useContext(BudgetsContext);
 }
-/*
-{
-  id:
-  name:
-  max
-}
 
-{
-  id:
-  budgetId:
-  amount:
-  description:
-}
- */
+
 
 export const BudgetsProvider = ({ children }) => {
   const [budgets, setBudgets] = useLocalStorage("budgets", []);
