@@ -37,7 +37,7 @@ const Home = () => {
           <Button onClick={openAddExpenseModal} variant="outline-primary">
             Add Expense{" "}
           </Button>
-          <Button onClick={""} variant="secondary"> Converter  </Button>
+          <Button  variant="secondary"> Converter  </Button>
         </Stack> 
         <TotalBudgetCard/>
         <div
