@@ -7,6 +7,7 @@ export default function BudgetCard({
   amount,
   max,
   gray,
+  dark,
   onAddExpenseClick,
   hideButtons,
   onViewExpensesClick,
@@ -16,6 +17,8 @@ export default function BudgetCard({
     classNames.push("bg-danger", "bg-opacity-10");
   } else if (gray) {
     classNames.push("bg-light");
+  } else if (dark) {
+    classNames.push("bg-dark");
   }
 
   return (

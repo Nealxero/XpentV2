@@ -6,6 +6,8 @@ import AddBudgetModal from "./AddBudgetModal";
 import AddExpenseModal from "./AddExpenseModal";
 import UncategorizedBudgetCard from "./UncategorizedBudgetCard";
 
+/* Linea 77 Total */
+
 import {
   UNCATEGORIZED_BUDGET_ID,
   useBudgets,
@@ -37,9 +39,18 @@ const Home = () => {
           <Button onClick={openAddExpenseModal} variant="outline-primary">
             Add Expense{" "}
           </Button>
-          <Button  variant="secondary"> Converter  </Button>
+         
         </Stack> 
-        <TotalBudgetCard/>
+        <div style={{
+         margin:"20px 0 ",
+         
+        }}>
+
+        <TotalBudgetCard style={{
+         
+        }}/>
+        
+        </div>
         <div
           style={{
             display: "grid",
@@ -48,13 +59,15 @@ const Home = () => {
             alignItems: "flex-start",
           }}
         >
+          
           {budgets.map((budget) => {
             const amount = getBudgetExpenses(budget.id).reduce(
               (total, expense) => total + expense.amount,
               0
             );
             return (
-              
+             
+
               <BudgetCard
                 key={budget.id}
                 name={budget.name}
