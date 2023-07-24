@@ -1,7 +1,7 @@
 import React from "react";
 import BudgetCard from "./BudgetCard";
 import { useBudgets } from "../contexts/BudgetsContext";
-import "/workspace/Xpent-/src/styles/totalBudgetCard.css";
+
 
 
 export default function TotalBudgetCard(props) {
