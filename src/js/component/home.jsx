@@ -27,16 +27,19 @@ const Home = () => {
   }
   return (
     <>
+    
       <Container className="my-4">
         <Stack direction="horizontal" gap="2" className="mb-4">
-          <h1 className="me-auto"> Budgets </h1>
+          <h1 className="me-auto"> XPent </h1>
           <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>
             Add Budget
           </Button>
           <Button onClick={openAddExpenseModal} variant="outline-primary">
             Add Expense{" "}
           </Button>
-        </Stack>
+          <Button onClick={""} variant="secondary"> Converter  </Button>
+        </Stack> 
+        <TotalBudgetCard/>
         <div
           style={{
             display: "grid",
@@ -51,6 +54,7 @@ const Home = () => {
               0
             );
             return (
+              
               <BudgetCard
                 key={budget.id}
                 name={budget.name}
@@ -70,7 +74,7 @@ const Home = () => {
               setViewExpensesModalBudgetId(UNCATEGORIZED_BUDGET_ID)
             }
           />
-          <TotalBudgetCard />
+          
         </div>
       </Container>
       <AddBudgetModal
