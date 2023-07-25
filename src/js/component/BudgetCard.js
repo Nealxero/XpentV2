@@ -40,7 +40,7 @@ export default function BudgetCard({
           <ProgressBar
             className="rounded-pill"
             animated
-            variant={ getProgressBarVariant(amount, max)}
+            variant={getProgressBarVariant(amount, max)}
             min={0}
             max={max}
             now={amount}
@@ -67,7 +67,8 @@ export default function BudgetCard({
 
 const getProgressBarVariant = (amount, max) => {
   const ratio = amount / max;
-  if (ratio < 0.5) return "info";
-  if (ratio < 0.75) return "warning";
+  if (ratio <= 0.5) return "info";
+  if (ratio <= 0.75) return "warning";
+  if (ratio >= 1.0) return "dark";
   return "danger";
 };
