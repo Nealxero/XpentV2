@@ -13,8 +13,9 @@ export default function BudgetCard({
   onViewExpensesClick,
 }) {
   const classNames = [];
+  
   if (amount > max) {
-    classNames.push("bg-danger", "bg-opacity-10");
+    classNames.push("bg-light", "bg-opacity-50", "");
   } else if (gray) {
     classNames.push("bg-light");
   } else if (dark) {
@@ -49,13 +50,13 @@ export default function BudgetCard({
         {!hideButtons && (
           <Stack direction="horizontal" gap="2" className="mt-4">
             <Button
-              variant="outline-primary"
+              variant="warning"
               className="ms-auto"
               onClick={onAddExpenseClick}
             >
               Add Expense{" "}
             </Button>
-            <Button onClick={onViewExpensesClick} variant="outline-secondary">
+            <Button onClick={onViewExpensesClick} variant="secondary">
               View Expenses{" "}
             </Button>
           </Stack>

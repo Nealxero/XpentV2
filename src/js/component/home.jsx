@@ -5,6 +5,7 @@ import { Container, Button } from "react-bootstrap";
 import AddBudgetModal from "./AddBudgetModal";
 import AddExpenseModal from "./AddExpenseModal";
 import UncategorizedBudgetCard from "./UncategorizedBudgetCard";
+import "../../styles/index.css";
 
 /* Linea 77 Total */
 
@@ -33,10 +34,10 @@ const Home = () => {
       <Container className="my-4">
         <Stack direction="horizontal" gap="2" className="mb-4">
           <h1 className="me-auto"> XPent </h1>
-          <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>
+          <Button variant="success" onClick={() => setShowAddBudgetModal(true)}>
             Add Budget
           </Button>
-          <Button onClick={openAddExpenseModal} variant="outline-primary">
+          <Button onClick={openAddExpenseModal} variant="warning" >
             Add Expense{" "}
           </Button>
          

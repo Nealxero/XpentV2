@@ -10,3 +10,31 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body { 
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  min-height: 100vh; /* Set body to cover the entire viewport height */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  background-attachment: fixed; /* Fix the background to prevent scrolling */
+   /* ff 3.6+ */
+   background: -moz-linear-gradient(23deg, rgba(255, 255, 255, 1) 0%, rgba(147, 236, 247, 1) 63%, rgba(0, 248, 255, 1) 100%); 
+
+   /* safari 5.1+,chrome 10+ */
+   background: -webkit-linear-gradient(23deg, rgba(255, 255, 255, 1) 0%, rgba(147, 236, 247, 1) 63%, rgba(0, 248, 255, 1) 100%);
+
+   /* opera 11.10+ */
+   background: -o-linear-gradient(23deg, rgba(255, 255, 255, 1) 0%, rgba(147, 236, 247, 1) 63%, rgba(0, 248, 255, 1) 100%);
+
+   /* ie 6-9 */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#00F8FF', GradientType=1 );
+
+   /* ie 10+ */
+   background: -ms-linear-gradient(23deg, rgba(255, 255, 255, 1) 0%, rgba(147, 236, 247, 1) 63%, rgba(0, 248, 255, 1) 100%);
+
+   /* global 94%+ browsers support */
+   background: linear-gradient(23deg, rgba(255, 255, 255, 1) 0%, rgba(147, 236, 247, 1) 63%, rgba(0, 248, 255, 1) 100%);
+}
+
+.classNames {
+    color: black !important;
+}
