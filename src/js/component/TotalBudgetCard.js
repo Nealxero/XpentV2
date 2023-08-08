@@ -10,5 +10,5 @@ export default function TotalBudgetCard(props) {
   const max = budgets.reduce((total, budgets) => total + budgets.max, 0);
   if (max === 0) return null;
 
-  return <> <BudgetCard amount={amount} name="Total" gray max={max} hideButtons /> </>;
+  return <div className="d-flex justify-content-center"> <BudgetCard amount={amount} name="Total Balance" gray max={max} hideButtons shorter /> </div>;
 }

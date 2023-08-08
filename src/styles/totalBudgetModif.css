@@ -1,0 +1,15 @@
+.shorter {
+    width: 450px;
+}
+.bg-max-reached { 
+    background-color: rgba(255, 118, 118, 0.804);
+}
+
+.text-limit { 
+    
+    color: rgb(158, 0, 0); /* Change this to your desired text color */
+    
+    font-weight: italics; /* Optionally add styling like bold or italics */
+    margin-top: 8px; 
+    text-shadow: 1px 1px 2px rgb(173, 0, 0)
+}

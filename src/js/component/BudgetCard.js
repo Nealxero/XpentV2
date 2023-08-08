@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../styles/totalBudgetModif.css";
 import { Card, ProgressBar, Stack, Button } from "react-bootstrap";
 import { currencyFormatter } from "./utils";
 export default function BudgetCard({
@@ -11,17 +11,20 @@ export default function BudgetCard({
   onAddExpenseClick,
   hideButtons,
   onViewExpensesClick,
+  shorter
 }) {
   const classNames = [];
   
-  if (amount > max) {
-    classNames.push("bg-light", "bg-opacity-50", "");
+  if (amount >= max) {
+    classNames.push("bg-max-reached" );
   } else if (gray) {
     classNames.push("bg-light");
   } else if (dark) {
     classNames.push("bg-dark");
+  } 
+  if (shorter) {
+    classNames.push("shorter");
   }
-
   return (
     <Card className={classNames.join(" ")}>
       <Card.Body>
@@ -47,6 +50,10 @@ export default function BudgetCard({
             now={amount}
           />
         )}
+        {amount >= max && (
+          <div className="text-limit mt-2">Budget Limit Reached !!</div>
+        )}
+        
         {!hideButtons && (
           <Stack direction="horizontal" gap="2" className="mt-4">
             <Button

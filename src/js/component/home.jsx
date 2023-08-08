@@ -5,6 +5,7 @@ import { Container, Button } from "react-bootstrap";
 import AddBudgetModal from "./AddBudgetModal";
 import AddExpenseModal from "./AddExpenseModal";
 import UncategorizedBudgetCard from "./UncategorizedBudgetCard";
+
 import "../../styles/index.css";
 
 /* Linea 77 Total */
@@ -22,18 +23,23 @@ const Home = () => {
   const [showAddExpenseModal, setShowAddExpenseModal] = useState(false);
   const [viewExpensesModalBudgetId, setViewExpensesModalBudgetId] = useState();
   const [addExpenseModalBudgetId, setaddExpenseModalBudgetId] = useState();
+  const [currencyType, setCurrencyType] = useState("EUR"); // Track currency type
   const { budgets, getBudgetExpenses } = useBudgets();
 
   function openAddExpenseModal(budgetId) {
     setShowAddExpenseModal(true);
     setaddExpenseModalBudgetId(budgetId);
   }
+    const whiteBorderStyle = {
+      color: 'white',
+      
+    }
   return (
     <>
     
       <Container className="my-4">
         <Stack direction="horizontal" gap="2" className="mb-4">
-          <h1 className="me-auto"> XPent </h1>
+          <h1 className="me-auto" style={whiteBorderStyle}> XPent </h1>
           <Button variant="success" onClick={() => setShowAddBudgetModal(true)}>
             Add Budget
           </Button>
