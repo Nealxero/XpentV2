@@ -58,13 +58,16 @@
 	},
 	"dependencies": {
 		"bootstrap": "^5.3.0",
+		"i18next": "^25.1.2",
 		"prop-types": "^15.7.2",
 		"query-string": "^7.0.1",
 		"react": "^17.0.2",
 		"react-bootstrap": "^2.8.0",
 		"react-dom": "^17.0.2",
+		"react-i18next": "^15.5.1",
 		"react-polyfills": "0.0.1",
 		"react-router": "^6.0.2",
+		"react-world-flags": "^1.6.0",
 		"uuid": "^9.0.0"
 	}
 }
