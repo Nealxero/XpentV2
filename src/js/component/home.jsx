@@ -6,8 +6,7 @@ import AddBudgetModal from "./AddBudgetModal";
 import AddExpenseModal from "./AddExpenseModal";
 import UncategorizedBudgetCard from "./UncategorizedBudgetCard";
 import { useTranslation } from "react-i18next";
-import Flag from "react-world-flags";
-
+import LanguageToggle from "./TranslationButton";
 import "../../styles/index.css";
 
 /* Linea 77 Total */
@@ -28,11 +27,12 @@ const Home = () => {
   const [currencyType, setCurrencyType] = useState("EUR"); // Track currency type
   const { budgets, getBudgetExpenses } = useBudgets();
   const { t, i18n } = useTranslation();
-
+  
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "es" : "en";
     i18n.changeLanguage(newLang);
   };
+ 
 
   function openAddExpenseModal(budgetId) {
     setShowAddExpenseModal(true);
@@ -48,27 +48,14 @@ const Home = () => {
           <h1 className="me-auto" style={whiteBorderStyle}>
             {" "}
             XPent{" "}
-            <Button
-            variant="outline-light"
-            onClick={() => i18n.changeLanguage("en")}
-            
-          >
-            <Flag code="GB" style={{ width: "24px", height: "16px" }} />
-          </Button>
-
-          <Button
-            variant="outline-light"
-            onClick={() => i18n.changeLanguage("es")}
-          >
-            <Flag code="ES" style={{ width: "24px", height: "16px" }} />
-          </Button>
+            <LanguageToggle/>
           </h1>
           
           <Button variant="success" onClick={() => setShowAddBudgetModal(true)}>
-            {t("add_budget")}
+            {t("home.add_budget")}
           </Button>
           <Button onClick={openAddExpenseModal} variant="warning">
-            {t("add_expense")}
+            {t("home.add_expense")}
           </Button>
         </Stack>
         <div

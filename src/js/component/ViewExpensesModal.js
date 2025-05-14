@@ -1,6 +1,8 @@
 import React from "react";
 import { Modal, Button, Stack } from "react-bootstrap";
+
 import { currencyFormatter } from "./utils";
+import { useTranslation } from "react-i18next";
 import {
   UNCATEGORIZED_BUDGET_ID,
   useBudgets,
@@ -9,7 +11,7 @@ import {
 export default function ViewExpensesModal({ budgetId, handleClose }) {
   const { getBudgetExpenses, budgets, deleteBudget, deleteExpense } =
     useBudgets();
-
+  const {t} = useTranslation();
   const expenses = getBudgetExpenses(budgetId)
   const budget =
     UNCATEGORIZED_BUDGET_ID === budgetId
@@ -21,7 +23,7 @@ export default function ViewExpensesModal({ budgetId, handleClose }) {
       <Modal.Header closeButton>
         <Modal.Title>
           <Stack direction="horizontal" gap="2">
-            <div> Expenses - {budget?.name}</div>
+            <div> {t("viewExpense.expense")} - {budget?.name}</div>
             {budgetId !== UNCATEGORIZED_BUDGET_ID && (
               <Button
                 onClick={() => {
@@ -30,7 +32,7 @@ export default function ViewExpensesModal({ budgetId, handleClose }) {
                 }}
                 variant="outline-danger"
               >
-                Delete
+                {t("viewExpense.delete")}
               </Button>
             )}
           </Stack>

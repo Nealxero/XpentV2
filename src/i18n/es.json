@@ -1,4 +1,35 @@
 {
-    "add_expense":"Agregar Gastos",
-    "add_budget":"Agregar Presupuesto"
+  "home": {
+    "add_expense": "Agregar Gastos",
+    "add_budget": "Agregar Presupuesto"
+  },
+
+  "addModal": {
+    "new_budget": "Nuevo Presupuesto",
+    "name": " Nombre ",
+    "max_spending": " Gasto Maximo ",
+    "add": " Agregar "
+  },
+  "addExpense": {
+    "new_expense": " Nuevo Gasto",
+    "amount": " Importe",
+    "description": " Descripcion ",
+    "budget": " Presupuesto "
+  },
+  "budgetCard" :{
+    "warning":" Limite del Presupuesto Alcanzado !",
+    "add_expense": " Agregar Gasto",
+    "view_expense" : "Ver Gasto"
+  },
+  "viewExpense":{
+    "expense": "Gastos",
+    "delete": "Eliminar "
+  },
+  "total":{
+    "total":"Balance Total"
+  },
+  "uncategorized":{
+    "uncategorized":"Otros"
+  }
+
 }

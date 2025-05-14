@@ -1,4 +1,37 @@
 {
-    "add_expense":"Add Expense",
-    "add_budget":"Add Budget"
+  "home": {
+    "add_expense": "Add Expense",
+    "add_budget": "Add Budget"
+  },
+
+  "addModal": {
+    "new_budget":"New Budget",
+    "name":" Name ",
+    "max_spending":" Max Spending",
+    "add":" Add "
+  },
+  "addExpense": {
+    "new_expense":" New Expense",
+    "amount":" Amount",
+    "description":" Description ",
+    "budget":" Budget "
+  },
+  "budgetCard" :{
+    "warning":" Budget Level Reached!",
+    "add_expense": " Add Expense",
+    "view_expense" : "View Expense"
+  },
+  "viewExpense":{
+    "expense": "Expenses",
+    "delete": "Delete"
+  },
+  "total":{
+    "total":"Total Balance"
+  },
+  "uncategorized":{
+    "uncategorized":"Others"
+  }
+
+  
+ 
 }

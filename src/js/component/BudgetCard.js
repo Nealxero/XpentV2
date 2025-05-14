@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/totalBudgetModif.css";
 import { Card, ProgressBar, Stack, Button } from "react-bootstrap";
 import { currencyFormatter } from "./utils";
+import { useTranslation } from "react-i18next";
 export default function BudgetCard({
   name,
   amount,
@@ -14,6 +15,7 @@ export default function BudgetCard({
   shorter
 }) {
   const classNames = [];
+  const { t } = useTranslation();
   
   if (amount >= max) {
     classNames.push("bg-max-reached" );
@@ -51,7 +53,7 @@ export default function BudgetCard({
           />
         )}
         {amount >= max && (
-          <div className="text-limit mt-2">Budget Limit Reached !!</div>
+          <div className="text-limit mt-2">{t("budgetCard.warning")}</div>
         )}
         
         {!hideButtons && (
@@ -61,10 +63,10 @@ export default function BudgetCard({
               className="ms-auto"
               onClick={onAddExpenseClick}
             >
-              Add Expense{" "}
+             {t("budgetCard.add_expense")}
             </Button>
             <Button onClick={onViewExpensesClick} variant="secondary">
-              View Expenses{" "}
+              {t("budgetCard.view_expense")}
             </Button>
           </Stack>
         )}

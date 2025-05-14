@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 import { useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 import { useBudgets } from "../contexts/BudgetsContext";
 
 export default function AddBudgetModal({ show, handleClose }) {
@@ -16,20 +16,21 @@ export default function AddBudgetModal({ show, handleClose }) {
     });
     handleClose();
   }
+  const { t } = useTranslation();
 
   return (
     <Modal show={show} onHide={handleClose} id="ModalBudget">
       <Form onSubmit={handleSubmit}>
         <Modal.Header closeButton>
-          <Modal.Title>New Budget</Modal.Title>
+          <Modal.Title>{t("addModal.new_budget")}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form.Group className="mb-3" controlId="name">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>{t("addModal.name")}</Form.Label>
             <Form.Control ref={nameRef} type="text" required />
           </Form.Group>
           <Form.Group className="mb-3" controlId="max">
-            <Form.Label>Max Spending</Form.Label>
+            <Form.Label>{t("addModal.max_spending")}</Form.Label>
             <Form.Control
               ref={maxRef}
               type="number"
@@ -40,8 +41,7 @@ export default function AddBudgetModal({ show, handleClose }) {
           </Form.Group>
           <div className="d-flex justify-content-end">
             <Button variant="success" type="submit">
-              {" "}
-              Add{" "}
+              {t("addModal.add")}
             </Button>
           </div>
         </Modal.Body>
