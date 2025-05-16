@@ -6,6 +6,7 @@ import AddBudgetModal from "./AddBudgetModal";
 import AddExpenseModal from "./AddExpenseModal";
 import UncategorizedBudgetCard from "./UncategorizedBudgetCard";
 import { useTranslation } from "react-i18next";
+
 import LanguageToggle from "./TranslationButton";
 import "../../styles/index.css";
 
@@ -27,6 +28,9 @@ const Home = () => {
   const [currencyType, setCurrencyType] = useState("EUR"); // Track currency type
   const { budgets, getBudgetExpenses } = useBudgets();
   const { t, i18n } = useTranslation();
+
+
+  
   
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "es" : "en";
